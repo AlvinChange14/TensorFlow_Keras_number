@@ -48,7 +48,7 @@ def callback():
 def handle_message(event):
     msg = event.message.text  # msg 是使用者發過來的String
 
-    message = TextSendMessage(text='哈囉你好，請傳給我一個數字的照片（白底黑字），讓我辨識看看是什麼數字！')
+    message = TextSendMessage(text='給我一個數字照片！')
     line_bot_api.reply_message(event.reply_token, message)
     print('-----------------')
 
@@ -67,7 +67,7 @@ def handle_content_message(event):
         return
 
     if is_image == False:
-        line_bot_api.reply_message(event.reply_token, '這好像不是圖片唷')
+        line_bot_api.reply_message(event.reply_token, '這不是圖片')
     else:
         message_content = line_bot_api.get_message_content(event.message.id)
         img, file_path = file.save_bytes_image(message_content.content)
