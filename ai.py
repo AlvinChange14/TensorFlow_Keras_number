@@ -57,7 +57,7 @@ class AI(object):
             test_image = np.reshape(im2, [1, 28, 28, 1])  # reshape it to our input placeholder shape
             p_ = self.model.predict(test_image).argmax(axis=1)
             print('predict numer: {}'.format(p_))
-            return '我覺得是{}!'.format(p_[0])
+            return '是{}!'.format(p_[0])
         except:
             print('predict_image_with_path error')
-            return '哎呀呀我失誤了...'
+            return '錯誤...
