@@ -1,10 +1,8 @@
 line-bot-sdk
 flask
-tensorflow==2.13.1
+tensorflow
 matplotlib
-numpy==1.24.3
-pydantic==2.10.6
-pydantic-core==2.27.2
+numpy
 Pillow
 
 
